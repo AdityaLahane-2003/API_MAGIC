@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu";
+}
+
+body {
+  background-color: #f3f3f3;
+}
+
+header {
+  background-color: #afaeae;
+  color: #ffffff;
+  font-size: 3.5em;
+  padding: 0.8em 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 3px 10px 0 #5e615c;
+  z-index: 1;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: 7px;
+}
+
+.options-container {
+  margin: 10em 0 2em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  text-align: center;
+}
+
+.option {
+  background-color: #d5d5d5;
+  border: none;
+  cursor: pointer;
+  padding: 0.8em 1.5em;
+  border-radius: 0.5em;
+  border: none;
+  text-transform: capitalize;
+  transition: transform 0.3s ease-out;
+}
+.option:hover{
+  transform: scale(1.2);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1em;
+}
+
+.news-card {
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr;
+  box-shadow: 0 0 5px #5e615c;
+  margin: 1em 0;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  transform: scale(1.05);
+}
+
+.news-card img {
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+.news-card:hover img{
+  transform: scale(1.1);
+}
+.news-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1em;
+  font-size: 15px;
+  background-color: #fff;
+}
+
+.news-title {
+  font-weight: 600;
+  color: #0b0028;
+}
+
+.news-description {
+  color: #6f6f6f;
+  text-align: justify;
+  margin: 0.8em 0 1em 0;
+}
+
+.view-button {
+  position: relative;
+  text-decoration: none;
+  background-color: #5e615c;
+  color: #ffffff;
+  width: 7em;
+  text-align: center;
+  padding: 0.3em 0.2em;
+  border-radius: 5px;
+}
+
+.view-button:hover {
+  background-color: #000000;
+}
+
+.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.country-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.country-container p{
+  margin-right: 15px;
+}
+
+.country-wrapper {
+  text-align: center;
+}
+
+select {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
